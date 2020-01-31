@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "25eec63f-3499-4291-94c8-ae201677334b",
+		"name": "Teste Ewally",
+		"description": "Teste de admissão da ewally",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ChecaBoleto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"linhaDigitavel\": \"00190.00009 03024.253001 03340.440175 9 81580000063425\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/boleto",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"boleto"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2431753d-8401-4a10-b6e9-949b2b297c27",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7271b62f-ae0c-4822-95a8-3b3d27fd341a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "ee29e1d4-5233-4983-8072-934933f55645",
+			"key": "baseUrl",
+			"value": "localhost:3333",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
