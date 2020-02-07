@@ -13,7 +13,7 @@ module.exports = {
     //limpando dados (pontos, espacos e hifens)
     const sanitizedLinhaDigitavel = utils.sanitizeBoleto(linhaDigitavel);
     //Usando pacote npm pra validar o boleto
-    const linhaDigitavelValida = boleto(sanitizedLinhaDigitavel, true);
+    const linhaDigitavelValida = worker.isValid(sanitizedLinhaDigitavel, true);
 
     const valor = worker.getValorBoleto(sanitizedLinhaDigitavel);
     const dataVencimento = worker.getDataVencimento(sanitizedLinhaDigitavel);
