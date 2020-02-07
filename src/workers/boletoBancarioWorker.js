@@ -43,5 +43,13 @@ module.exports = {
     return dataBase.add(fatorDeVencimento, 'days');
 
 
+  },
+  isValid(linhaDigitavel) {
+    if (linhaDigitavel.length !== 47)
+      return false;
+    const bloco = linhaDigitavel.substring(1, 32);
+    const dv = linhaDigitavel.substring(32, 33);
+    const dvCalculado = utils.modulo11BoletoBancario(bloco);
+    return parseInt(dvCalculado) === parseInt(dv);
   }
 }

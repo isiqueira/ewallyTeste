@@ -1,5 +1,4 @@
 const utils = require('../utils');
-const { boleto } = require('boleto-brasileiro-validator');
 const worker = require('../workers');
 
 module.exports = {

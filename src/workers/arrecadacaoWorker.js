@@ -39,4 +39,7 @@ module.exports = {
     return null;
 
   },
+  isValid(linhaDigitavel) {
+    //TODO implementar
+  }
 }
